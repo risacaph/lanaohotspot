@@ -1,0 +1,210 @@
+@font-face {
+  font-family: "sf-pro-regular";
+  src: url(./font/sf-pro-regular.OTF);
+}
+@font-face {
+  font-family: "space-tech-italic";
+  src: url(./font/space-tech-italic.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: -apple-system, "sf-pro-regular", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  font-family: -apple-system, "sf-pro-regular", sans-serif;
+  overflow: auto;
+  background: linear-gradient(
+    315deg,
+    rgba(24, 69, 59, 1) 3%,
+    rgba(70, 106, 98, 1) 98%
+  );
+  animation: gradient 20s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.home-pay-logo {
+  align-items: center;
+}
+
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(1);
+  }
+}
+.custom-swal-width {
+  width: 380px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  /* margin-top: 5px; */
+}
+
+.card {
+  width: 480px;
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin-bottom: 10px;
+
+  .promo-card {
+    color: var(--white);
+    display: inline-block;
+    width: 260px;
+    height: 90px;
+    margin: 5px 2px 10px 2px;
+    border-color: var(--white);
+    border-width: 1px;
+    background-color: rgb(24, 69, 59);
+    text-align: left;
+    border-radius: 8px;
+  }
+}
+
+.promo-card:hover {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.promo-card.selected {
+  background-color: rgb(36, 150, 62);
+  color: var(--white);
+}
+
+.promo-card .card-body {
+  padding: 0px;
+}
+
+.promo-card .card-title,
+.promo-card .card-text {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.card-text {
+  font-size: 13px;
+  font-display: swamp;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  font-style: italic;
+  font-weight: 400;
+}
+.card-title {
+  border-style: solid;
+  border-width: 1px;
+  background-color: rgb(70, 106, 98);
+  text-align: center;
+  border-radius: 6px;
+  border-color: var(--white);
+  height: 89px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+.forgot_voucher p {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.forgot_voucher a:link,
+.forgot_voucher a:visited {
+  font-size: 12px;
+  font-weight: 400;
+  background: rgb(7, 102, 255);
+  color: var(--white);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 2%;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  border-radius: 0.5em;
+}
+.forgot_voucher a:active {
+  font-size: 12px;
+  font-weight: 400;
+  background: rgb(31, 117, 255);
+  transform: scale(0.9);
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+.forgot_voucher img {
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 18px;
+}

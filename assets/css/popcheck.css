@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "sf-pro-regular";
+  src: url(./font/sf-pro-regular.OTF);
+}
+@font-face {
+  font-family: "space-tech-italic";
+  src: url(./font/space-tech-italic.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "sf-pro-regular", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.popcheck {
+  --max-width: 30rem;
+  width: min(90% - 0rem, var(--max-width));
+  background: var(--white);
+  border-radius: 20px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 30px;
+  visibility: hidden;
+  /* transition: transform 0.2s, top 0.2s; */
+  -webkit-box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.8);
+}
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  --max-width: 30rem;
+  width: min(90% - 0rem, var(--max-width));
+  z-index: 100;
+}
+
+.status {
+  color: var(--white);
+}
+
+.forgot_voucher p {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 2em;
+  color: var(--bak-clr);
+  margin-top: 5%;
+}
+.forgot_voucher a:link,
+.forgot_voucher a:visited {
+  font-size: 12px;
+  font-weight: 400;
+  background: var(--blue);
+  color: var(--white);
+  padding-left: 18px;
+  padding-top: 5px;
+  padding-right: 18px;
+  padding-bottom: 5px;
+  margin-top: -5%;
+  margin-bottom: 5%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0.5em;
+}
+.forgot_voucher a:active {
+  font-size: 12px;
+  font-weight: 400;
+  background: var(--blue);
+  transform: scale(0.9);
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+.forgot_voucher img {
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 18px;
+}
+
+.popcheck button {
+  font-size: 16px;
+  font-weight: 400;
+  width: 90%;
+  margin-top: 20px;
+  padding: 10px 0;
+  background: var(--btns-bak-clr);
+  color: var(--white);
+  border: 0;
+  outline: none;
+  border-radius: 24px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+.popcheck button:active,
+.popcheck button:hover {
+  background: var(--btns-bak-clr-hvr);
+  transform: scale(0.9);
+  border: none;
+  outline: none;
+}

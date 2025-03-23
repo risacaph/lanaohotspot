@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "sf-pro-regular";
+  src: url(./font/sf-pro-regular.OTF);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "sf-pro-regular", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Start Modal */
+.mobutton {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--white);
+  text-align: center;
+  text-decoration: none;
+  background: var(--mo-btn);
+  border-radius: 48px;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  display: block;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+.mobutton:focus,
+.mobutton:hover {
+  color: var(--white);
+  background-color: var(--mo-btn-hvr-actv);
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+[id^="modal"] {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+[id^="modal"]:target {
+  display: block;
+}
+/* input[type="checkbox"] {
+  position: absolute;
+  clip: rect(0 0 0 0);
+} */
+.popup {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 99999;
+  -webkit-overflow-scrolling: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll !important;
+}
+.popup__overlay {
+  position: fixed;
+  z-index: 1;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* background: var(--clr-card-bg); */
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 90%;
+  pointer-events: none;
+}
+.popup__wrapper {
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: solid 3px var(--white); */
+  border-radius: 25px;
+  padding: 70px 0px 40px 0px;
+  background: var(--bak-clr);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  height: 70%;
+  --max-width: 55rem;
+  width: min(95% - 0rem, var(--max-width));
+  margin-inline: auto;
+  -webkit-overflow-scrolling: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll !important;
+  /* box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.8); */
+}
+.popup__close {
+  position: absolute;
+  top: 16px;
+  right: 26px;
+  color: var(--white);
+  text-decoration: none;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  padding: 3px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+.popup__close:hover,
+.popup__close:active {
+  text-decoration: none;
+  color: var(--white);
+  background: none;
+  cursor: pointer;
+}
+
+.popup__close img {
+  content: var(--popup-close-img);
+}
+
+.modal-box {
+  position: relative;
+  --max-width: 35rem;
+  width: min(90% - 0rem, var(--max-width));
+  border-radius: 20px;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+  clear: both;
+}
+.modal-glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+h2 {
+  font-size: 32px;
+  text-align: center;
+  color: var(--white);
+  padding: 20px;
+}
+/* End of Modal */
